@@ -22,12 +22,12 @@
 
 .source__item:hover,
 .source__item:focus {
-    border-color: #3fcc59;
-    color: #69db7e;
-    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    border-color: #7dcafa;
+    color: #93e2f7;
+    box-shadow: 0 0.5em 0.5em -0.4em #93cbeb;
     transform: translateY(-0.25em);
+    animation: neon 1s ease infinite;
 }
-
 .source__item-name {
     font-weight: 400;
     white-space: nowrap;

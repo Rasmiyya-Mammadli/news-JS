@@ -1,35 +1,104 @@
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: #fff;
-    background: #17181c;
+    background: #1a254e;
     font-family: sans-serif;
-}
-
-header {
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  header {
     padding: 10px 30px;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 900;
+    text-align: center;
+  }
+  .animation {
+    animation: neon 2s ease infinite;
+  }
+  @keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #00efa3a8, 0 0 20px #00d3efa8, 0 0 20px #3800efa8, 0 0 20px #0097efa8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #0b0b80, 0 0 5px #2c0b80, 0 0 5px #0b5380, 0 0 5px rgb(11, 38, 128), 0 0 2px #0b3e80, 4px 4px 2px #40340a;
+        color: #a0cced;
+    }
 }
-
-footer {
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  
+  footer {
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-footer .copyright {
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-top: auto;
+  }
+  
+  footer .copyright {
     font-size: 14px;
     color: #333;
     text-align: center;
-}
-footer .copyright a {
-    color: #444;
-}
-footer .copyright a:hover {
+  }
+  
+  footer .copyright a {
     color: #555;
-}
-footer .copyright:before {
+  }
+  
+  footer .copyright a:hover {
+    color: #777;
+  }
+  
+  footer .copyright:before {
     content: '©';
-}
+  }
+  
+  .author-github,
+  .rs-school {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 20px;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .author-github__logo {
+    color: #555;
+  }
+  
+  .author-github:hover > .author-github__logo,
+  .author-github:hover > .author-github__nick {
+    color: #777;
+  }
+  
+  .rs-school__logo {
+    width: 200px;
+    height: 50px;
+    background-image: url('./assets//svg/rs-shool__logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+  }
+  
+  .rs-school__logo:hover {
+    background-image: url('./assets//svg/rs-school__logo--hover.svg')
+  }
+  
